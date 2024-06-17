@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-heading">GRADUATION E CARD</h1>
+    </header>
+
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong id="letterHeading">Dear Students🎇.</strong>
+                        <p id="letterBody">
+                            Congratulations, Class of 2024! Your hard work and dedication have paid off.<br>
+                            Dream big, stay curious, and never stop learning.<br>
+                            Cheers to your success and bright future!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeShareForm()">&times;</span>
+            <h2>Share via WhatsApp</h2>
+            <form id="shareForm">
+                <label for="phoneNumber">Enter friend's phone number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+                <button type="submit">Share</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="customizeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCustomizeForm()">&times;</span>
+            <h2>Customize Your E-Card</h2>
+            <form id="customizeForm">
+                <label for="heading">Heading:</label>
+                <input type="text" id="heading" name="heading" value="Dear Students🎇." required>
+                <label for="body">Message:</label>
+                <textarea id="body" name="body" rows="4" required>
+Congratulations, Class of 2024! Your hard work and dedication have paid off.
+Dream big, stay curious, and never stop learning.
+Cheers to your success and bright future!
+                </textarea>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" src="Achievement.mp3" loop></audio>
+
+    <div class="controls">
+        <button onclick="toggleMusic()">Play/Pause Music</button>
+        <button onclick="openShareForm()">Share</button>
+        <button onclick="openCustomizeForm()">Customize</button>
+        <button onclick="resetContent()">Reset</button>
+    </div>
+
+    <script src="Java.js/java2.js"></script>
+</body>
+</html>
+
